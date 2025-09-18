@@ -18,3 +18,25 @@ print(hello)
 #class = "10th Standard" # SyntaxError: invalid syntax ===> class is a keyword
 classes = "10th Standard"
 print(classes)
+
+
+# Identifiers
+data = "hello good morning"
+print(data)
+# 2day_data = "hello"  # invalid as starts with digit
+# print(2day_data)
+_data = "hello"
+print(_data)
+
+# $data = "hello" # SyntaxError: invalid syntax cannot have $ only Underscore(_) allowed
+# print(_data)
+
+# Improper way of using Identifiers
+x = "Ravi"
+y = 30
+z = "Python"
+
+# Proper way of using Identifiers
+student_name = "Ravi"
+student_id = 30
+student_enrolled_course = "python"
