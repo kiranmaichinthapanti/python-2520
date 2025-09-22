@@ -509,5 +509,4 @@
                 range(start,stop,step) 
                     start : from zero included 
                     start : at end excluded
-                    step : is 1 by defualt  
-
+                    step : is 1 by defualt
