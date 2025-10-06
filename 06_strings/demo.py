@@ -102,3 +102,52 @@ text = "python"
 print(text[0])
 print(text[1])
 # print(text[10]) # IndexError: string index out of range
+
+print(text[0:6:-1]) # empty string
+
+# string concatenation
+s = "good"
+m = " morning"
+print(s+m)
+
+a = 10
+b = 20
+print(a+b)
+
+# string formatting
+age = 30
+# print("My age is: "+age) # TypeError: can only concatenate str (not "int") to str
+
+# interpolation
+print(f"My age is : {age}")
+print(f"My age is :",age)
+print(f"My age is :", +age)
+print(f"My age is : " +str(age))
+
+# print("My age after 5 years would be: " +age+5) # TypeError: can only concatenate str (not "int") to str
+print("My age after 5 years would be: ", +age+5) 
+
+
+# String Repetition
+laugh = "Haha"
+print(laugh)
+
+laugh_hard = "Hahahahahhahhhahahahahahahahahahahaha"
+print(laugh_hard)
+
+laugh_hard = laugh * 20
+print(laugh_hard)
+
+greet = "hello"
+print(greet)
+greet = "Hello"
+print(greet)
+
+# String Immutability
+# Immutable : Cannot be changed
+greet = "hello"
+print(greet)
+# greet[0] = "H" # TypeError: 'str' object does not support item assignment
+print(greet)
+
+print(dir(greet))
