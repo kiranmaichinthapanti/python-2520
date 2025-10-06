@@ -53,14 +53,27 @@ course_fee = float(input("Enter Course Fee: "))
 
 if course_fee <= 0:
     print("Course Fee must be greater than zero")
+    actual_fee = 0
+    fee_to_pay = 0 
 else:
+    actual_fee = course_fee
     coupon = input("Enter Coupon Code: ").strip()
 
     if coupon.upper() == "PROMO":
         if course_fee > 5000:
-            course_fee -= 5000
+            fee_to_pay = course_fee - 5000
         else:
-            course_fee = 0
+            fee_to_pay = 0
         print("PROMO Applied : 5000 Discount!")
 
-    print(f"Final Course Fee : {course_fee}")
+    else:
+        fee_to_pay = course_fee
+
+print("="*50)
+print("           Student Details")
+print("="*50)
+print("Studnet ID : ",student_id)
+print("Studnet Name : ",student_name)
+print("System Generated Email : ",system_email)
+print("Actual Course Fee : ",actual_fee)
+print("Fee To Pay : ",fee_to_pay)
