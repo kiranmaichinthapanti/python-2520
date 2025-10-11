@@ -66,3 +66,4 @@ for num in num_list:
 # Duplicates allowed
 num_list = [10,20,30,40,50,20,10] # homogenous
 print(num_list)
+print(dir(num_list))
