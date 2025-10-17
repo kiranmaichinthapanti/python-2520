@@ -814,7 +814,7 @@
 
 
 
-23rd Sep 2025
+25th Sep 2025
 =============
 
     -> Application Requirement
@@ -831,3 +831,12 @@
         -> As of now it's a Console Based Application (Terminal)
 
         -> In future, you can turn this into Web Application (Django + Database)
+
+26th Sep 2025
+=============
+
+    -> Student Management System (Product/Employee etc) continued
+
+    -> Similar to Student Management System, create a Product Management System which
+    is a sub service of Ecommerce System
+    
