@@ -102,3 +102,122 @@ employee_info(emp_location="hyderabad",emp_name="ravi",emp_email="ravi@gmail.com
 employee_info(emp_location="pune",emp_name="john",emp_email="john@gmail.com")
 employee_info(emp_location="bangalore",emp_name="krishna",emp_email="krishna@gmail.com")
 employee_info(emp_location="bangalore",emp_name="krishna",emp_email="krishna@gmail.com",company_name="META")
+
+# Arbitrary Positional Arguments(*args)
+def add_all(*numbers):
+    total = 0
+    for num in numbers:
+        total = total + num
+    print(f"The Total Sum is {total}")
+
+add_all(10)
+add_all(10,20)
+add_all(10,20,30,40,70)
+
+# Arbitrary Keyword Arguments(**kwargs)
+def profile(**info):
+    print(info)
+
+profile(name="kiran")
+profile(name="kiran", location="hyd")
+profile(name="kiran", location="hyd", age = 20)
+
+def credit_trans(**trans):
+    print(trans)
+    toatl = 0
+    for tran in trans:
+        print(tran)
+credit_trans(jan=1000,feb=2000,mar=3000)
+
+# NOTE : just like dict it's considering only keys
+
+# To get value => we need key
+def credit_trans(**trans):
+    print(trans)
+    toatl = 0
+    for tran in trans:
+        print(trans[tran])
+credit_trans(jan=1000,feb=2000,mar=3000)
+
+# using both to do some calculations
+def credit_trans(**trans):
+    print(trans)
+    toatl = 0
+    for tran in trans:
+        total = toatl + trans[tran]
+    print(f"You have done {len(trans)} which amounts to total of {total}")
+credit_trans(jan=1000,feb=2000,mar=3000)
+
+# without return keyword
+def add(a,b):
+    a+b
+
+add(10,20)
+print(add(10,20))
+
+# with return keyword
+def add(a,b):
+   return a+b
+
+add(10,20)
+print(add(10,20))
+
+def add(a,b):
+    return a+b
+    print("See if this will be printed")
+
+print(add(10,20))
+
+def math_ops(a,b):
+    return a+b
+    return a-b
+    return a/b
+
+print(math_ops(100,200))
+
+def math_ops(a,b,opr):
+    if opr == "+":
+        return a+b
+    elif opr == "*":
+        return a*b
+    elif opr == "/":
+        return a/b
+    else:
+        return "Invalid Operator Selected"
+    
+print(math_ops(100,200,"*"))
+print(math_ops(100,200,"/"))
+print(math_ops(100,200,"+"))
+print(math_ops(100,200,"-"))
+
+# Function Composition
+def add(a,b):
+    return a+b
+
+def sub(c,d,e):
+    return add(c,d) - e
+
+print(sub(3,4,5)) # add c & d from that minus - e # 2
+
+# local scope
+def add():
+    # local variable
+    la = 10
+    lb = 5
+    print(la) # access local variable within function
+    print(lb) # access local variable within function
+
+add()
+
+# trying to access local variable outside function
+# print(la) # NameError: name 'la' is not defined. Did you mean: 'a'?
+
+# local scope
+def add(la,lb):
+    print(la) # access local variable within function
+    print(lb) # access local variable within function
+
+add(30,40)
+
+# trying to access local variable outside function
+# print(la)
