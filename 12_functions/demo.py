@@ -221,3 +221,101 @@ add(30,40)
 
 # trying to access local variable outside function
 # print(la)
+
+# global variable
+ga = 30
+
+def add(la,lb):
+    print(la) # access local variable within the function
+    print(lb) # access local variable within the function
+    print(ga) # access global variable within the function
+add(10,20)
+
+print(ga) # access global variable outside function
+
+# name conflict
+ga = 30
+
+def add(la,lb, ga):
+    print(la) # access local variable within the function
+    print(lb) # access local variable within the function
+    print(ga) # access local variable within the function
+    print(globals()['ga']) # access global varibale ga within the function
+    print(la+lb+ga)
+
+add(1,2,3)
+
+# trying to change global variable
+count = 0
+count += 1
+print(count)
+
+count = 0
+def increment():
+    global count
+    count += 1 # UnboundLocalError: cannot access local variable 'count' where it is not associated with a value
+
+increment()
+print(count)
+
+# Function Types in Python
+
+# get predefined functions
+import builtins
+print(dir(builtins))
+
+# without Lambda
+def add(a,b):
+    return a+b
+print(add(3,4))
+
+# with lambda
+# lambda arguments: expression
+sum = lambda a,b: a+b
+print(sum(10,20))
+
+# IILE
+print((lambda a,b:a+b)(5,8))
+
+# without lambda
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+    
+print(is_even(5))
+print(is_even(10))
+
+# with lambda
+even = lambda num : True if num % 2 == 0 else False
+print(even(10))
+
+print((lambda num:num % 2 == 0)(5))
+print((lambda num:num % 2 == 0)(4))
+
+print((lambda num:num % 2 != 0)(4))
+print((lambda num:num % 2 != 0)(5))
+
+
+print((lambda num: "Positive" if num > 0 else "Negative" if num < 0 else "Zero")(10))
+print((lambda num: "Positive" if num > 0 else "Negative")(10))
+
+
+employee_info = lambda emp_name,emp_email,emp_location: print(f"Hi {emp_name}, your email is {emp_email} and work location is {emp_location}")
+employee_info("ravi","ravi@gmail","hyd")
+
+# regular function
+def greet(name):
+    print("Hello",name)
+    print("Welcome To Python")
+
+greet("ravi")
+
+def add_nums(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+print(add_nums(1,2,3))
