@@ -1205,3 +1205,12 @@
         -> In write "w" mode data will be overwritten
 
         -> In append "a" mode data will not be overwritten
+
+9th Oct 2025
+============
+
+    -> In python we can create / delete files and folders using
+
+        -> os
+
+        -> shutil
