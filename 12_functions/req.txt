@@ -77,9 +77,15 @@
             -> Highest Score 
             -> Lowest Score 
             -> All Skills 
-            -> Skills Count  
+            -> Skills Count   
 
--> When we Exit Application, Display Admin Info 
+-> Using Lambda style
+
+    -> Add a new feature, to search by skill criteria
+
+        -> Allows administrators to search students based a particular skill
+
+-> When we Exit Application, Display Admin Info
 
 students {}
 
