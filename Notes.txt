@@ -1295,3 +1295,30 @@
 
             class UserDefinedException(Exception):
                 pass
+
+13th Oct 2025
+=============
+
+    -> Data - Python
+    -> App (Full Stack) - Python
+    -> Scripting (Automation) - Python
+
+        -> Ansible
+        -> Terraform
+
+    -> Boto3
+
+    -> AWS
+
+        -> Amazon S3 (Simple Storage Service) is a highly scalable, durable, and 
+            available object storage service offered by Amazon Web Services (AWS). 
+        
+        -> It allows users to store and retrieve any amount of 
+            data, at any time, from anywhere on the web.
+
+    -> S3 has
+
+        -> Buckets - Storage Containers Which Hold Objects (Files)
+
+        -> Objects - Object is the fundamental storage entity in S3
+                    An Object is nothing but file
