@@ -55,21 +55,57 @@ student_three_obj.info()
 
 # __init__() -> Constructor
 class Student:
+
+    # class variable is shared across all objects
+    institute_name = "Edify"
+
     # Constructor
     def __init__(self,student_name,student_email):
+        if not Student.validate_email(student_email):
+            raise ValueError("Invalid Email Address")
+        # instance variables
         self.student_name = student_name
         self.student_email = student_email
 
-    # method
+    # instance method
     def info(self):
         # student_email = "kiran@gmail.com"
+        # Accessing instance variables
         print("Student Name: ",self.student_name)
         print("Student Email: ",self.student_email)
+        
+        # Accessing class variables
+        print("Student Institute: ", Student.institute_name) # recommended
+        # print("Student Institute Via Object: ", self.institute_name) # not recommended
+    
+    # class method
+    @classmethod
+    def change_institute(cls,new_name):
+        cls.institute_name = new_name # recommended
+        # Student.istitute_name = new_name
+        # Accessing instance data inside a class method is not possible
+        # print("Accessing Instance Data: ",self.student_name)
+
+    # static method -> utility
+    @staticmethod
+    def validate_email(email):
+        return "@" in email and "." in email
 
 kiran_obj = Student("kiran","kiran@gmail.com")
 abhi_obj = Student("abhi","abhi@gmail.com")
 puppy_obj = Student("puppy","puppy@gmail.com")
-
+print("="*50)
 kiran_obj.info()
 abhi_obj.info()
 puppy_obj.info()
+
+# change the institute
+Student.change_institute("Digital Edify")
+print("="*50)
+kiran_obj.info()
+abhi_obj.info()
+puppy_obj.info()
+
+# calling static method
+print(Student.validate_email("test@gmail.com"))
+print(Student.validate_email("test"))
