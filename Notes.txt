@@ -1660,4 +1660,102 @@
             -> Rating is 5 : Give 5000 bonus
             -> Otherwise : Give 0 bonus
 
-        -> Calculate Total Payment FOr Sessions
+        -> Calculate Total Payment For Sessions
+
+21st Oct 2025
+=============
+
+    -> 4 Pillars of OOP
+
+        -> Inheritance
+
+        -> Encapsulation
+
+        -> Abstraction
+
+        -> Polymorphism
+
+    -> Inheritance
+
+        -> Inheritance is a core OOP concept where a new class, 
+            called a subclass or child class, acquires the properties(vars)
+            and methods of an existing class, called a superclass or parent class.
+
+        -> Main purpose of Inheritance is Code Reusability
+
+        -> Syntax
+
+            class Parent:
+                pass
+
+            class Child(Parent):
+                pass
+
+        -> With Inheritance
+
+            -> Code Reusability
+
+            -> No Code Duplication
+
+            -> Project Size is less
+
+            -> Code Reliability improved
+
+            -> Code Maintainability improved
+
+
+    -> Types Of Inheritance
+
+        -> Single Level Inheritance
+        
+            -> One Parent -> One Child
+
+        -> Multi Level Inheritance
+ 
+            -> Parent -> Child -> GrandChild
+
+        -> Multiple Inheritance
+
+            -> One Child -> Multiple Parents
+
+        -> Hierarchical Inheritance
+
+            -> One Parent -> Multiple Child
+
+        -> Hybrid Inheritance
+
+            -> Combination of two or more types
+
+-> super():
+
+    -> The super() function is used to call methods from a parent (superclass) inside a child (subclass).
+       It allows you to extend or override inherited methods while still reusing the parent’s functionality.
+
+    -> Syntax:
+        
+        super()
+
+    -> Why Use super()?
+
+        -> No need to hardcode parent class names – useful when class hierarchies change.
+         
+        -> Works with single, multiple, and multilevel inheritance.
+            
+        -> Improves code reusability and maintainability.
+
+        -> Prevents duplicate initialization in complex hierarchies
+
+
+    -> Without super, calling the parent constructorIf a child class overrides 
+        the constructor without using super(), the parent class’s attributes won’t 
+        be initialized, which can lead to errors
+
+    -> super() in a Class Hierarchy
+
+        -> In a multilevel class hierarchy, super() ensures that all parent constructors are executed in the correct order, 
+        avoiding duplicate code and properly initializing all inherited attributes.
+
+        -> Python uses Method Resolution Order (MRO) to determine the sequence in which parent classes are searched.
+            When super() is used, Python follows the MRO to decide which parent constructor or method to call next, 
+            ensuring each class is executed once and in the correct order. This guarantees predictable initialization
+            in multilevel inheritance.
