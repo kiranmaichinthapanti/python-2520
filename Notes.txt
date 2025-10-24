@@ -1759,3 +1759,62 @@
             When super() is used, Python follows the MRO to decide which parent constructor or method to call next, 
             ensuring each class is executed once and in the correct order. This guarantees predictable initialization
             in multilevel inheritance.
+
+22nd Oct 2025
+=============
+
+    -> Encapsulation
+
+        -> Encapsulation is a core concept in object-oriented programming (OOP) that binds
+            data (attributes) and the methods that operate on that data into a single unit, 
+            like a clas.
+
+        -> This process involves restricting direct access to an object's internal state,
+            which is a principle known as "data hiding"
+
+        -> Other languages like java or C++ enforces Rules for Encapsulation,
+            coming to python there is no enforcing
+
+            -> Java/C++ = "You're not allowed."
+            -> Python = "You shouldn't, but you can if you insist."
+
+        -> While Python does not strict access modifiers like private or protected
+            keywords found in some other languages
+
+        -> Python uses "naming Conventions" to indicate the intended visibility of members.
+
+        -> Hide Data
+
+            -> We have Public
+
+                -> without any special prefix are considered public and
+                     can be accessed from anywhere 
+
+            -> We have Private
+
+                -> prefixed with a double undersore (__) trigger
+
+                -> Cannot be accessed from outside
+                
+                -> print(obj._Myclass_private_variable) # Accsessing through mangled name is possible
+
+            -> We have Protected
+
+                -> prefixed with a single undersore (_) trigger
+
+                -> This signals to other developers that the attribute is intended for
+                    internal use within the class and its subclasses, 
+                    and should not be directly accessed or modified from outside the class.
+
+            
+            -> Getters & Setters
+
+                -> In python, getters and setters are methods used to control access to 
+                    class attributes, promoting data encapsulation and allowing for validation
+                    when retrieving or modifying attribute values.
+
+            -> @property 
+                -> While Python doesn't enforce strict "private" attributes like
+                some other object-oriented languages, the use of getters and setters,
+                often with the @property decorator,
+                provides a Pythonic way to achieve this control.
