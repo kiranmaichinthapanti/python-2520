@@ -1,0 +1,7 @@
+text = "hello world python"
+result = text.split(" ")
+
+print("-".join(result))
+
+print("-".join(text.split(" ")))
+

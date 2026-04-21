@@ -1,0 +1,4 @@
+s = "python is very easy"
+
+word = s.split()
+print(len(word))
